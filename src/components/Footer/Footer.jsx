@@ -1,8 +1,9 @@
-import { Shuffle } from "@mui/icons-material";
+import { AspectRatio, FavoriteBorder, PlaylistPlay, Shuffle, VolumeDown } from "@mui/icons-material";
 import { SkipPrevious } from "@mui/icons-material";
 import { PlayCircleOutline } from "@mui/icons-material";
 import { SkipNext } from "@mui/icons-material";
 import { Repeat } from "@mui/icons-material";
+import { Grid, Slider } from "@mui/material";
 import { FooterCenter, FooterContainer, FooterLeft, FooterRight } from "./styles";
 
 export const Footer = () => {
@@ -14,6 +15,8 @@ export const Footer = () => {
                     <h4>guaracha corroncho</h4>
                     <p>el guizo</p>
                 </div>
+                <FavoriteBorder/>
+                <AspectRatio/>
             </FooterLeft>
             <FooterCenter>
                 <Shuffle/>
@@ -22,7 +25,13 @@ export const Footer = () => {
                 <SkipNext/>
                 <Repeat/>
             </FooterCenter>
-            <FooterRight>right</FooterRight>
+            <FooterRight>
+                <Grid container spacing={2}>
+                    <Grid item><PlaylistPlay /></Grid>
+                    <Grid item><VolumeDown /></Grid>
+                    <Grid item xs><Slider /></Grid>
+                </Grid>
+            </FooterRight>
         </FooterContainer>
     )
 }
