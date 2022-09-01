@@ -1,11 +1,13 @@
-import Login from "./components/login/Login";
-import { Player } from "./components/Player/Player";
+//import { Player } from "./components/Player/Player";
+
+import { Login } from "./Login/Login.jsx";
+
 
 function Div1() {
   return (
     <div>
-      <Player/>
-      {/*<Login/>*/}
+      {/*<Player/>*/}
+      <Login/>
     </div>
   )
 }
