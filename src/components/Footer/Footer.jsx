@@ -1,35 +1,45 @@
-import { AspectRatio, FavoriteBorder, PlaylistPlay, Shuffle, VolumeDown } from "@mui/icons-material";
+import { AspectRatio, CreateOutlined, FavoriteBorder, PhonelinkOutlined, PlaylistPlay, Shuffle, VolumeUpOutlined } from "@mui/icons-material";
 import { SkipPrevious } from "@mui/icons-material";
-import { PlayCircleOutline } from "@mui/icons-material";
+import { PlayCircle } from "@mui/icons-material";
 import { SkipNext } from "@mui/icons-material";
 import { Repeat } from "@mui/icons-material";
 import { Grid, Slider } from "@mui/material";
-import { FooterCenter, FooterContainer, FooterLeft, FooterRight } from "./styles";
-
+import { FooterCenter, FooterContainer, FooterLeft, FooterRight, OptionsPlay } from "./styles";
+import './styles.css'
+import './animation.js'
 export const Footer = () => {
     return (
         <FooterContainer>
             <FooterLeft>
-                <img src="https://static.posters.cz/image/750/buque-costero/coldplay-parachutes-album-cover-i56853.jpg" alt="cover" />
+                <img src="https://static.posters.cz/image/750/buque-costero/coldplay-parachutes-album-cover-i56853.jpg" alt="cover" className="disk1"/>
                 <div>
-                    <h4>guaracha corroncho</h4>
-                    <p>el guizo</p>
+                    <h4>november rain</h4>
+                    <p>Guns of rose</p>
                 </div>
                 <FavoriteBorder/>
                 <AspectRatio/>
             </FooterLeft>
             <FooterCenter>
-                <Shuffle/>
-                <SkipPrevious/>
-                <PlayCircleOutline/>
-                <SkipNext/>
-                <Repeat/>
+                <OptionsPlay>
+                    <Shuffle/>
+                    <SkipPrevious id="buttonSkip"/>
+                    <PlayCircle id="buttonPlay"/>
+                    <SkipNext id="buttonReturn"/>
+                    <Repeat/>
+                </OptionsPlay>
+                <Grid container spacing={2}>
+                    <p>2:32</p>
+                    <Slider item xs/>
+                    <p>1:28</p>
+                </Grid>
             </FooterCenter>
             <FooterRight>
                 <Grid container spacing={2}>
+                    <Grid item><CreateOutlined/></Grid>
                     <Grid item><PlaylistPlay /></Grid>
-                    <Grid item><VolumeDown /></Grid>
-                    <Grid item xs><Slider /></Grid>
+                    <Grid item><PhonelinkOutlined/></Grid>
+                    <Grid item><VolumeUpOutlined /></Grid>
+                    <Grid item s><Slider /></Grid>
                 </Grid>
             </FooterRight>
         </FooterContainer>

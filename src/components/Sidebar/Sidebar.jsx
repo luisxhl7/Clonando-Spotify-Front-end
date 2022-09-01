@@ -2,7 +2,7 @@ import { AddBox, Favorite, Home } from '@mui/icons-material';
 import { Search } from '@mui/icons-material';
 import { LibraryMusic } from '@mui/icons-material';
 import { SiderbarChoice } from "./SiderbarChoice"
-import { SidebarContainer } from "./styles"
+import {  SidebarContainer } from "./styles"
 
 export const Sidebar = () => {
   return (
@@ -11,9 +11,10 @@ export const Sidebar = () => {
       <SiderbarChoice title="Inicio" Icon={Home} />
       <SiderbarChoice title="Buscar" Icon={Search} />
       <SiderbarChoice title="Tu Biblioteca" Icon={LibraryMusic} />
-      <hr />
+      <hr className='separator1'/>
       <SiderbarChoice title="Crear Playlist" Icon={AddBox} />
       <SiderbarChoice title="Tus me gusta" Icon={Favorite} />
+      <hr className='separator2'/>
       <SiderbarChoice title="Reggeton" />
       <SiderbarChoice title="DanceHall" />
     </SidebarContainer>

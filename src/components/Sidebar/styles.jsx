@@ -12,11 +12,15 @@ export const SidebarContainer = styled.div`
         padding: 22px 10px 10px 16px;
         margin: auto auto 10px;
     }
-    & hr{
+    & .separator1{
         border: 1px solid #000000;
         width: 90%;
         margin: 10px auto;
     }
+    & .separator2{
+        border: 0.1px solid #fff;
+        width: 90%;
+        margin: 10px auto;    }
     & .MuiSvgIcon-root{
         font-size: 31px;
         padding: 0px 10px 0px 0px;

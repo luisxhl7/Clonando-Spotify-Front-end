@@ -10,6 +10,7 @@ const scope = [
   "user-modify-playback-state"
 ]
 export const loginURL = `${endpoint}?client_id=${client_id}&response_type=token&redirect_uri=${redirect_uri}&scope=${scope.join("%20")}&show_dialog=true`;
+
 /*
 export const getTokenFromURL = () => {
   return window.location.hash //retorna la parte ancla de un URL desde el #
