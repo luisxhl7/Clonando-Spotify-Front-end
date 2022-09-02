@@ -11,8 +11,8 @@ const scope = [
 export const loginURL = `${endpoint}?client_id=${client_id}&response_type=token&redirect_uri=${redirect_uri}&scope=${scope.join("%20")}&show_dialog=true`;
 
 export const getTokenFromURL = ()=> {
-  return window.location.hash.toString(1).split("&")
-  .reduce((initial, item) =>{
+  return window.location.hash.substring(1).split("&")
+  .reduce((initial, item) => {
     let parts = item.split("=")
     initial[parts[0]] = decodeURIComponent(parts[1])
     return initial
