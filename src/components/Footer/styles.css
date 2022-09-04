@@ -4,8 +4,15 @@
   margin: auto 20px;
   object-fit: contain;
   border-radius: 35px;
+}
+.disk2{
+  height: 60px;
+  width: 60px;
+  margin: auto 20px;
+  object-fit: contain;
+  border-radius: 35px;
   animation: turn 5s linear; 
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; 
 }
 @keyframes turn{
   from{

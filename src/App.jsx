@@ -12,7 +12,7 @@ function App() {
     //window.location.hash= "";
     const _token = data.access_token;
     setToken(_token)
-    console.log("token => ",token)
+    console.log("token => ",_token)
 
   },[])
 

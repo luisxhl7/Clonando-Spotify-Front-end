@@ -4,14 +4,15 @@ import { PlayCircle } from "@mui/icons-material";
 import { SkipNext } from "@mui/icons-material";
 import { Repeat } from "@mui/icons-material";
 import { Grid, Slider } from "@mui/material";
+import { turn } from "./animation";
 import { FooterCenter, FooterContainer, FooterLeft, FooterRight, OptionsPlay } from "./styles";
 import './styles.css'
-import './animation.js'
 export const Footer = () => {
+
     return (
         <FooterContainer>
             <FooterLeft>
-                <img src="https://static.posters.cz/image/750/buque-costero/coldplay-parachutes-album-cover-i56853.jpg" alt="cover" className="disk1"/>
+                <img src="https://static.posters.cz/image/750/buque-costero/coldplay-parachutes-album-cover-i56853.jpg" alt="cover" className="disk1" id="disk1"/>
                 <div>
                     <h4>november rain</h4>
                     <p>Guns of rose</p>
@@ -23,7 +24,7 @@ export const Footer = () => {
                 <OptionsPlay>
                     <Shuffle/>
                     <SkipPrevious id="buttonSkip"/>
-                    <PlayCircle id="buttonPlay"/>
+                    <PlayCircle id="buttonPlay" onClick={()=>{turn()}}/>
                     <SkipNext id="buttonReturn"/>
                     <Repeat/>
                 </OptionsPlay>
@@ -45,3 +46,4 @@ export const Footer = () => {
         </FooterContainer>
     )
 }
+
